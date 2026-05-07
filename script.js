@@ -66,7 +66,6 @@ if (roach) {
 
     targetSpeed = randomBetween(0.35, 0.95);
 
-    // alguna pausa ocasional para que se sienta más orgánica
     if (Math.random() < 0.16) {
       pauseUntil = now + randomBetween(500, 1200);
     }
@@ -125,7 +124,6 @@ if (roach) {
       roach.classList.add("walking");
     }
 
-    // micro-variación orgánica
     if (!isPaused) {
       angle += (Math.random() - 0.5) * 0.01;
     }
