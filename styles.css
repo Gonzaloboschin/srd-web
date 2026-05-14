@@ -47,7 +47,7 @@ a {
 }
 
 .navbar {
-  width: min(100% - 48px, 1160px);
+  width: min(100% - 40px, 1320px);
   margin: 0 auto;
   padding: 18px 0;
   display: flex;
@@ -88,6 +88,7 @@ a {
 
 .nav-links {
   display: flex;
+  gap: 22px;
   align-items: center;
   gap: 24px;
   font-size: 14px;
@@ -111,6 +112,7 @@ a {
 }
 
 .header-contact {
+  min-width: 132px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -129,6 +131,7 @@ a {
 }
 
 .header-mail {
+  display: none;
   font-size: 12px !important;
   font-weight: 500 !important;
   color: var(--muted) !important;
@@ -150,6 +153,63 @@ a {
   font-size: 28px;
   cursor: pointer;
   color: var(--green);
+}
+
+.contact-dropdown {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.contact-toggle {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 280px;
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 100;
+}
+
+.contact-menu.active {
+  display: grid;
+  gap: 6px;
+}
+
+.contact-menu a {
+  display: block;
+  padding: 14px;
+  border-radius: 16px;
+  transition: 0.2s ease;
+}
+
+.contact-menu a:hover {
+  background: var(--green-soft);
+}
+
+.contact-menu strong {
+  display: block;
+  color: var(--green);
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.contact-menu span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 /* HERO */
@@ -751,7 +811,7 @@ h1 {
 
 @media (max-width: 900px) {
   .navbar {
-    width: min(100% - 32px, 1160px);
+    width: min(100% - 40px, 1320px);
   }
 
   .menu-button {

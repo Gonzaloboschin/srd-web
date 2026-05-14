@@ -31,7 +31,6 @@ if (contactToggle && contactMenu) {
   contactMenu.addEventListener("click", (event) => {
     event.stopPropagation();
   });
-  
 }
 /* -----------------------------------------
    CUCARACHA PEQUEÑA FLOTANTE
