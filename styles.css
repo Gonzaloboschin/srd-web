@@ -656,6 +656,61 @@ h1 {
   animation: antennaWiggle 0.25s infinite alternate ease-in-out;
 }
 
+.contact-dropdown {
+  position: relative;
+}
+
+.contact-toggle {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 260px;
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 80;
+}
+
+.contact-menu.active {
+  display: grid;
+  gap: 6px;
+}
+
+.contact-menu a {
+  padding: 14px;
+  border-radius: 16px;
+  transition: 0.2s ease;
+}
+
+.contact-menu a:hover {
+  background: var(--green-soft);
+}
+
+.contact-menu strong {
+  display: block;
+  color: var(--green);
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.contact-menu span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 @keyframes roachBob {
   from {
     transform: translateY(-0.6px);
@@ -799,8 +854,13 @@ h1 {
     width: 100%;
   }
 
-  .trust-row div {
-    width: 100%;
+  .trust-row strong {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-size: clamp(20px, 2vw, 24px);
+    line-height: 1.1;
   }
 
   .whatsapp-float {

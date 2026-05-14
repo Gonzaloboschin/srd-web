@@ -15,6 +15,24 @@ if (menuButton && navLinks) {
   });
 }
 
+const contactToggle = document.getElementById("contactToggle");
+const contactMenu = document.getElementById("contactMenu");
+
+if (contactToggle && contactMenu) {
+  contactToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    contactMenu.classList.toggle("active");
+  });
+
+  document.addEventListener("click", () => {
+    contactMenu.classList.remove("active");
+  });
+
+  contactMenu.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+  
+}
 /* -----------------------------------------
    CUCARACHA PEQUEÑA FLOTANTE
    - Se mueve libremente por la pantalla
